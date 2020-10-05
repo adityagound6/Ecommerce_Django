@@ -33,3 +33,12 @@ class Product(models.Model):
         else:
             return Product.get_all_products()
 
+
+class Customer(models.Model):
+    first_name = models.CharField(max_length=10)
+    last_name = models.CharField(max_length=10)
+    email = models.EmailField()
+    password = models.CharField(max_length=500)
+
+    def register(self):
+        self.save()

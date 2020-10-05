@@ -1,6 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Create an account </h1>
+<div class="container">
+<div class="p-4 m-4">
+<div class="col-lg-5 mx-auto border rounded p-4">
+    <h3 class="alert alert-light  border rounded ">Create An Account</h3>
+<form action="/signup" method="POST">
+    {% csrf_token %}
+
+
+    <label for="exampleFormControlInput1">first Name</label>
+    <input type="text" name="first_name" class="form-control"  placeholder="">
+    <label for="exampleFormControlInput1">last name</label>
+    <input type="text" name="last_name" class="form-control"  placeholder="">
+
+
+      <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" name="email" class="form-control"  placeholder="name@example.com">
+  </div>
+
+
+      <div class="form-group">
+    <label for="exampleFormControlInput1">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="">
+  </div>
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+
+</form>
+</div>
+</div>
+</div>
 
 {% endblock %}
