@@ -4,21 +4,14 @@
 <div class="container">
 <div class="p-4 m-4">
 <div class="col-lg-5 mx-auto border rounded p-4">
-    <h3 class="alert alert-light  border rounded ">Create An Account</h3>
-<form action="/signup" method="POST">
+    <h3 class="alert alert-light  border rounded ">Log In</h3>
+<form action="/login" method="POST">
     {% csrf_token %}
     {% if error %}
     <div class="alert alert-danger" role="alert">
         {{error}}
     </div>
     {% endif %}
-
-
-    <label for="exampleFormControlInput1">first Name</label>
-    <input type="text" name="first_name" class="form-control" value="{{value.first_name}}"  placeholder="">
-    <label for="exampleFormControlInput1">last name</label>
-    <input type="text" name="last_name" class="form-control" value="{{value.last_name}}"  placeholder="">
-
 
       <div class="form-group">
     <label for="exampleFormControlInput1">Email address</label>
@@ -31,7 +24,7 @@
     <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="">
   </div>
 
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">Log in</button>
 
 </form>
 </div>
